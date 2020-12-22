@@ -354,16 +354,22 @@ import backgroundImage from "./assets/background.jpeg";
 
 ## Tecnologias
 
-- [nodeJS](https://nodejs.org/)
+- [ReactJS](https://pt-br.reactjs.org/)
 - [yarn](https://yarnpkg.com/)
-- [express](https://github.com/expressjs/express)
-- [nodemon](https://github.com/remy/nodemon)
-- [uuidv4](https://github.com/thenativeweb/uuidv4)
+- [react](https://pt-br.reactjs.org/docs/react-api.html)
+- [react-dom](https://pt-br.reactjs.org/docs/react-dom.html)
+- [@babel/core](https://babeljs.io/docs/en/babel-core)
+- [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
+- [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
+- [webpack](https://webpack.js.org/)
+- [webpack-cli](https://webpack.js.org/api/cli/)
+- [@babel/cli](https://babeljs.io/docs/en/babel-cli)
+- [babel-loader](https://github.com/babel/babel-loader)
+- [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+- [style-loader](https://webpack.js.org/loaders/style-loader/)
+- [css-loader](https://webpack.js.org/loaders/css-loader/)
+- [file-loader](https://webpack.js.org/loaders/file-loader/)
 
 ---
 
 Desenvolvido por [Johnatan Luiz Osterloh](https://www.linkedin.com/in/johnatanosterloh/)
-
-```
-
-```
