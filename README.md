@@ -352,6 +352,66 @@ import backgroundImage from "./assets/background.jpeg";
 <img width={300} src={backgroundImage} />;
 ```
 
+- Conectar o Fron-end com o Back-end:
+
+- Para realizar a comunição do front-end com o back-end, vamos utilizar o <strong>axios</strong>, que é responsável por fazer as chamadas da api no front-end, responsável por realizar essa comunição.
+
+```js
+yarn add axios
+```
+
+- Para configurar a comunicação do front com o back-end, vamos criar um diretório chamado <i>services</i> com um arquivo <u>api.js</u> e passar através do axios a URL do back-end:
+
+```js
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "http://localhost:3333",
+});
+
+export default api;
+```
+
+- No projeto é necessário configurar o <strong>useEffect</strong>, que auxilia para carregar no front-end as informações que estão contidas na api. Ela dispara funções quando o componente for exibido em tela, ele recebe dois parâmetros, sendo o primeiro referente a qual função será dispara e o segundo é quando essa função deve ser disparada, caso a função seja disparada apenas uma vez, o segundo parâmetro pode ficar vazio, esse segundo parâmetro é conhecido como array de dependências.
+
+```js
+useEffect(() => {
+  api.get("/projects").then((response) => {
+    setProjects(response.data);
+  });
+}, []);
+```
+
+- Para adicionar um novo dado no array do back-end, é necessário instalar uma nova dependência e configurar o babel:
+
+```js
+yarn add @babel/plugin-transform-runtime -D
+```
+
+- Configuração <i>babel.config.js</i>:
+
+```js
+module.exports = {
+  presets: ["@babel/preset-env", "@babel/preset-react"],
+  plugins: ["@babel/plugin-transform-runtime"],
+};
+```
+
+- Com o babel reconfigurado, podemos configurar o projeto para realizar POST no back-end:
+
+```js
+async function handleAddProject() {
+  const response = await api.post("projects", {
+    title: `Novo projeto ${Date.now()}`,
+    owner: "Johnatan",
+  });
+
+  const project = response.data;
+
+  setProjects([...projects, project]);
+}
+```
+
 ## Tecnologias
 
 - [ReactJS](https://pt-br.reactjs.org/)
@@ -369,6 +429,8 @@ import backgroundImage from "./assets/background.jpeg";
 - [style-loader](https://webpack.js.org/loaders/style-loader/)
 - [css-loader](https://webpack.js.org/loaders/css-loader/)
 - [file-loader](https://webpack.js.org/loaders/file-loader/)
+- [axios](https://github.com/axios/axios)
+- [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
 
 ---
 
