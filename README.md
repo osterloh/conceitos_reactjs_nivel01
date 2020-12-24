@@ -6,9 +6,27 @@
 
 ## Descrição
 
-Este projeto está sendo desenvolvido em <strong>[ReactJs](https://pt-br.reactjs.org/)</strong> para fins de capacitação pessoal
+Este projeto desenvolvido em <strong>[ReactJs](https://pt-br.reactjs.org/)</strong> para fins de capacitação pessoal
 
-## Etapas
+## Como Usar
+
+Para clonar e executar este aplicativo, você precisará [Git](https://git-scm.com), [Node.js v12.20.0](https://nodejs.org/) ou superior + [Yarn 1.22.5](https://yarnpkg.com/) ou superior instalado no seu computador. Executar no seu terminal:
+
+```bash
+# Para clonar este repositório
+$ git clone https://github.com/osterloh/conceitos_reactjs_nivel01.git
+
+# Entrar no repositório
+$ cd conceitos_reactjs_nivel01
+
+# Instalar as dependências
+$ yarn
+
+#  Executar o sistema
+$ yarn dev
+```
+
+## Etapas do desenvolvimento do projeto
 
 - Antes de iniciar o projeto ReactJs, é necessário definir em qual diretório o projeto irá ficar armazendo e executar o comando para criar o arquivo <strong>package.json</strong>, o qual irá conter informações sobre o projeto e bibliotecas adicionadas:
 
