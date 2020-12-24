@@ -24,6 +24,9 @@ $ yarn
 
 #  Executar o sistema
 $ yarn dev
+
+# Obs: para compilar corretamente esse projeto, é necessário estar com o projeto back-end rodando:
+$ git clone https://github.com/osterloh/nodeJS_01.git
 ```
 
 ## Etapas do desenvolvimento do projeto
